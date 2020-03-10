@@ -1,3 +1,3 @@
 # SQLQueryParser
 Parser for SQL Query.
-Final project for Automation and Language Theorem course.
+Final project for Database System course.
