@@ -1,0 +1,30 @@
+ 
+ select nim,nama from mahasiswa ; 
+ PROJECTION nim,nama, -- on the fly 
+SELECTION select,nim,nama,from, -- A1 key 
+mahasiswa 
+Cost : 64.0 
+ 
+ select nim,nama from mahasiswa where nim = 160 ; 
+ PROJECTION nim,nama, -- on the fly 
+SELECTION nim,=, -- A2 
+ mahasiswa 
+ Cost :2.0 
+  
+ select nim,nama from mahasiswa where nim = 160 ; 
+ PROJECTION nim,nama, -- on the fly 
+SELECTION nim,=, -- A2 
+ mahasiswa 
+ Cost :2.0 
+  
+ select nim,nama from mahasiswa where nim = 160 ; 
+ PROJECTION nim,nama, -- on the fly 
+SELECTION nim,=, -- A2 
+ mahasiswa 
+ Cost :1.178900229222185 
+  
+ select nama,nim from mahasiswa join registrasi using (nim); 
+ PROJECTION nama,nim, -- on the fly 
+JOIN mahasiswa.nim = registrasi.nim -- BNLJ 
+registrasi  mahasiswa
+Cost :1910.0 
