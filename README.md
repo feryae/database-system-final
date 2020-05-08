@@ -1,3 +1,2 @@
-# SQLQueryParser
-Parser for SQL Query.
-Final project for Database System course.
+# Database System Final
+Final project for database system.
